@@ -1,6 +1,7 @@
 // ================= EXPORT =================
 
-document.getElementById("btnExportData")?.addEventListener("click", () => {
+document.getElementById("btnExportData")
+?.addEventListener("click", () => {
 
   const backup = {
 
@@ -12,16 +13,23 @@ document.getElementById("btnExportData")?.addEventListener("click", () => {
       localStorage.getItem("settings") || "{}"
     ),
 
-    kho: JSON.parse(
-      localStorage.getItem("kho") || "[]"
+    khoParts: JSON.parse(
+      localStorage.getItem("khoParts") || "[]"
+    ),
+
+    jobs: JSON.parse(
+      localStorage.getItem("jobs") || "[]"
     ),
 
     backupDate: new Date().toISOString()
+
   };
 
   const blob = new Blob(
     [JSON.stringify(backup, null, 2)],
-    { type: "application/json" }
+    {
+      type: "application/json"
+    }
   );
 
   const url = URL.createObjectURL(blob);
@@ -35,11 +43,17 @@ document.getElementById("btnExportData")?.addEventListener("click", () => {
     new Date().toISOString().slice(0,10) +
     ".json";
 
-alert("Đang tạo file backup...");
+  document.body.appendChild(a);
 
   a.click();
 
+  document.body.removeChild(a);
+
   URL.revokeObjectURL(url);
+
+  if (typeof showToast === "function") {
+    showToast("Đã tạo file backup", "success");
+  }
 
 });
 
@@ -58,36 +72,66 @@ document.getElementById("importDataFile")
 
     try {
 
-      const data = JSON.parse(event.target.result);
+      const data = JSON.parse(
+        event.target.result
+      );
 
       if (data.bills) {
+
         localStorage.setItem(
           "bills",
           JSON.stringify(data.bills)
         );
+
       }
 
       if (data.settings) {
+
         localStorage.setItem(
           "settings",
           JSON.stringify(data.settings)
         );
+
       }
 
-      if (data.kho) {
+      if (data.khoParts) {
+
         localStorage.setItem(
-          "kho",
-          JSON.stringify(data.kho)
+          "khoParts",
+          JSON.stringify(data.khoParts)
+        );
+
+      }
+
+      if (data.jobs) {
+
+        localStorage.setItem(
+          "jobs",
+          JSON.stringify(data.jobs)
+        );
+
+      }
+
+      if (typeof showToast === "function") {
+        showToast(
+          "Khôi phục dữ liệu thành công",
+          "success"
         );
       }
 
-      alert("Khôi phục dữ liệu thành công!");
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
 
-      location.reload();
+    }
+    catch {
 
-    } catch {
-
-      alert("File không hợp lệ!");
+      if (typeof showToast === "function") {
+        showToast(
+          "File backup không hợp lệ",
+          "error"
+        );
+      }
 
     }
 
@@ -104,16 +148,27 @@ document.getElementById("btnClearAllData")
 
   if (
     !confirm(
-      "Xóa toàn bộ hóa đơn, kho và cài đặt?"
+      "Xóa toàn bộ hóa đơn, kho, công việc và cài đặt?"
     )
   ) return;
 
   localStorage.removeItem("bills");
+
   localStorage.removeItem("settings");
-  localStorage.removeItem("kho");
 
-  alert("Đã xóa toàn bộ dữ liệu");
+  localStorage.removeItem("khoParts");
 
-  location.reload();
+  localStorage.removeItem("jobs");
+
+  if (typeof showToast === "function") {
+    showToast(
+      "Đã xóa toàn bộ dữ liệu",
+      "warning"
+    );
+  }
+
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
 
 });
