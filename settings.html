@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cài đặt - Quán Điện Tiến</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100">
+  <div class="max-w-md mx-auto min-h-screen pb-24">
+    <header class="bg-blue-600 text-white p-4 shadow">
+      <h1 class="text-2xl font-bold">QUÁN ĐIỆN TIẾN</h1>
+      <p class="text-sm opacity-90">Cài đặt hệ thống</p>
+    </header>
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <h2 class="font-bold text-lg mb-4">Thông tin cửa hàng</h2>
+        <div class="space-y-3">
+          <input id="shopName" class="w-full border rounded-xl p-3" placeholder="Tên cửa hàng">
+          <input id="shopPhone" class="w-full border rounded-xl p-3" placeholder="Số điện thoại">
+          <input id="kmPrice" type="number" class="w-full border rounded-xl p-3" placeholder="Tiền xăng / Km">
+          <input id="defaultCong" type="number" class="w-full border rounded-xl p-3" placeholder="Tiền công mặc định">
+        </div>
+      </div>
+    </section>
+    <section class="px-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="font-bold">Danh sách tiền công</h3>
+          <button id="btnAddCong" class="bg-blue-600 text-white px-3 py-2 rounded-xl text-sm">+ Thêm</button>
+        </div>
+        <div id="congList" class="space-y-2">
+        </div>
+      </div>
+    </section>
+    
+    <!-- SAO LƯU DỮ LIỆU -->
+<section class="px-4 mt-6 pb-4">
+
+  <div class="bg-white rounded-2xl p-4 shadow">
+
+    <div class="mb-4">
+      <h3 class="font-bold text-lg">
+        Sao lưu & Khôi phục
+      </h3>
+
+      <p class="text-sm text-gray-500 mt-1">
+        Quản lý dữ liệu hóa đơn, kho và cài đặt
+      </p>
+    </div>
+
+    <div class="space-y-3">
+
+      <button
+        id="btnExportData"
+        class="w-full bg-blue-600 text-white py-3 rounded-xl">
+        💾 Sao lưu dữ liệu
+      </button>
+
+      <label
+        class="block w-full bg-green-600 text-white py-3 rounded-xl text-center cursor-pointer">
+        📥 Khôi phục dữ liệu
+
+        <input
+          id="importDataFile"
+          type="file"
+          accept=".json"
+          hidden>
+      </label>
+
+      <button
+        id="btnClearAllData"
+        class="w-full bg-red-600 text-white py-3 rounded-xl">
+        🗑️ Xóa toàn bộ dữ liệu
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <section class="p-4">
+      <button id="btnSave" class="w-full bg-green-600 text-white py-3 rounded-xl">Lưu cài đặt</button>
+    </section>
+    
+  </div>
+  
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg">
+    <div class="max-w-md mx-auto grid grid-cols-4 text-center">
+      <button onclick="location.href='index.html'" class="p-3">🏠
+        <br>Home</button>
+      <button onclick="location.href='bill.html'" class="p-3">📄
+        <br>Bill</button>
+      <button onclick="location.href='kho.html'" class="p-3">📦
+        <br>Kho</button>
+      <button onclick="location.href='setting.html'" class="p-3 bg-blue-100 text-blue-600 font-bold">⚙️
+        <br>Setting</button>
+    </div>
+  </nav>
+  <script src="assets/js/settings.js"></script>
+  <script src="assets/js/backup.js"></script>
+</body>
+
+</html>

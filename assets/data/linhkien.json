@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "ten": "Tụ 10uF",
+    "giaNhap": 15000,
+    "giaBan": 25000
+  },
+  {
+    "id": 2,
+    "ten": "Tụ 12uF",
+    "giaNhap": 18000,
+    "giaBan": 28000
+  },
+  {
+    "id": 3,
+    "ten": "Tụ 16uF",
+    "giaNhap": 22000,
+    "giaBan": 32000
+  },
+  {
+    "id": 4,
+    "ten": "Tụ 18uF",
+    "giaNhap": 25000,
+    "giaBan": 35000
+  },
+  {
+    "id": 5,
+    "ten": "Tụ 20uF",
+    "giaNhap": 30000,
+    "giaBan": 40000
+  },
+  {
+    "id": 6,
+    "ten": "Relay máy bơm",
+    "giaNhap": 65000,
+    "giaBan": 85000
+  },
+  {
+    "id": 7,
+    "ten": "Phao điện",
+    "giaNhap": 50000,
+    "giaBan": 70000
+  },
+  {
+    "id": 8,
+    "ten": "Phích cắm điện",
+    "giaNhap": 12000,
+    "giaBan": 20000
+  },
+  {
+    "id": 9,
+    "ten": "Ổ cắm điện",
+    "giaNhap": 20000,
+    "giaBan": 30000
+  },
+  {
+    "id": 10,
+    "ten": "CB 1P 20A",
+    "giaNhap": 50000,
+    "giaBan": 70000
+  },
+  {
+    "id": 11,
+    "ten": "CB 2P 32A",
+    "giaNhap": 120000,
+    "giaBan": 150000
+  },
+  {
+    "id": 12,
+    "ten": "Vòng bi 6201",
+    "giaNhap": 15000,
+    "giaBan": 25000
+  },
+  {
+    "id": 13,
+    "ten": "Vòng bi 6202",
+    "giaNhap": 20000,
+    "giaBan": 30000
+  },
+  {
+    "id": 14,
+    "ten": "Vòng bi 6203",
+    "giaNhap": 25000,
+    "giaBan": 35000
+  },
+  {
+    "id": 15,
+    "ten": "Công tắc điện",
+    "giaNhap": 15000,
+    "giaBan": 25000
+  }
+]

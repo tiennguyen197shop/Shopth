@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử hóa đơn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100">
+  <div class="max-w-md mx-auto min-h-screen pb-24">
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white p-4 shadow">
+      <h1 class="text-2xl font-bold">QUÁN ĐIỆN TIẾN</h1>
+      <p class="text-sm opacity-90">Lịch sử hóa đơn</p>
+    </header>
+    <!-- SEARCH -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <input id="searchBill" class="w-full border rounded-xl p-3" placeholder="Tìm khách hàng">
+      </div>
+    </section>
+    <!-- ACTION -->
+    <section class="px-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <div class="flex justify-between items-center">
+          <h3 class="font-bold">Danh sách hóa đơn</h3>
+          <button id="btnClearBills" class="bg-red-600 text-white px-3 py-2 rounded-xl text-sm">Xóa tất cả</button>
+        </div>
+      </div>
+    </section>
+    <!-- LIST -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <div id="billList" class="space-y-2">
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- NAV -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg">
+    <div class="max-w-md mx-auto grid grid-cols-4 text-center">
+      <button onclick="location.href='index.html'" class="p-3">🏠
+        <br>Home</button>
+      <button class="p-3 bg-blue-100 text-blue-600 font-bold">📄
+        <br>Bill</button>
+      <button onclick="location.href='kho.html'" class="p-3">📦
+        <br>Kho</button>
+      <button onclick="location.href='settings.html'" class="p-3">⚙️
+        <br>Setting</button>
+    </div>
+  </nav>
+  <script src="assets/js/bill.js"></script>
+</body>
+
+</html>

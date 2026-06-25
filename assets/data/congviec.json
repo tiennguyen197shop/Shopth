@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "ten": "Thay tụ máy bơm",
+        "gia": 90000
+    },
+    {
+        "id": 2,
+        "ten": "Thay relay máy bơm",
+        "gia": 170000
+    },
+    {
+        "id": 3,
+        "ten": "Cuốn lại động cơ máy bơm",
+        "gia": 280000
+    },
+    {
+        "id": 4,
+        "ten": "Vệ sinh máy bơm",
+        "gia": 50000
+    },
+    {
+        "id": 5,
+        "ten": "Sửa máy bơm tăng áp",
+        "gia": 150000
+    },
+    {
+        "id": 6,
+        "ten": "Thay vòng bi",
+        "gia": 120000
+    },
+    {
+        "id": 7,
+        "ten": "Sửa quạt điện",
+        "gia": 100000
+    },
+    {
+        "id": 8,
+        "ten": "Vệ sinh quạt điện",
+        "gia": 50000
+    },
+    {
+        "id": 9,
+        "ten": "Thay dây nguồn",
+        "gia": 50000
+    },
+    {
+        "id": 10,
+        "ten": "Sửa ổ cắm điện",
+        "gia": 80000
+    },
+    {
+        "id": 11,
+        "ten": "Lắp aptomat",
+        "gia": 100000
+    },
+    {
+        "id": 12,
+        "ten": "Kiểm tra điện tại nhà",
+        "gia": 100000
+    }
+]

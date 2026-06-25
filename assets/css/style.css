@@ -1,0 +1,36 @@
+body {
+  font-family: system-ui;
+}
+
+/* TOTAL BOX */
+.total-box {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* BUTTON TIỀN CÔNG */
+.cong-btn {
+  padding: 10px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.cong-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* ITEM LIST */
+.item {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

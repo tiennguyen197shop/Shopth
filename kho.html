@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kho Linh Kiện - Quán Điện Tiến</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100">
+
+<div class="max-w-md mx-auto min-h-screen pb-24">
+
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white p-4 shadow">
+
+        <h1 class="text-2xl font-bold">
+            QUÁN ĐIỆN TIẾN
+        </h1>
+
+        <p class="text-sm opacity-90">
+            Quản lý kho linh kiện
+        </p>
+
+    </header>
+
+    <!-- NÚT THÊM -->
+    <section class="p-4">
+
+        <div class="bg-white rounded-2xl p-4 shadow">
+
+            <div class="flex justify-between items-center">
+
+                <h2 class="font-bold text-lg">
+                    Kho linh kiện
+                </h2>
+
+                <button
+                    id="btnAddPart"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-xl">
+
+                    + Thêm
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TÌM KIẾM -->
+    <section class="px-4">
+
+        <div class="bg-white rounded-2xl p-4 shadow">
+
+            <input
+                id="searchKho"
+                class="w-full border rounded-xl p-3"
+                placeholder="Tìm linh kiện...">
+
+        </div>
+
+    </section>
+
+    <!-- THỐNG KÊ -->
+    <section class="p-4">
+
+        <div class="grid grid-cols-2 gap-3">
+
+            <div class="bg-white rounded-2xl p-4 shadow">
+
+                <div class="text-gray-500 text-sm">
+                    Tổng mặt hàng
+                </div>
+
+                <div
+                    id="tongMatHang"
+                    class="text-2xl font-bold">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow">
+
+                <div class="text-gray-500 text-sm">
+                    Tổng tồn kho
+                </div>
+
+                <div
+                    id="tongTonKho"
+                    class="text-2xl font-bold">
+
+                    0
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DANH SÁCH -->
+    <section class="px-4 pb-6">
+
+        <div class="bg-white rounded-2xl p-4 shadow">
+
+            <h3 class="font-bold mb-3">
+                Danh sách linh kiện
+            </h3>
+
+            <div
+                id="khoList"
+                class="space-y-2">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- MENU -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg">
+
+    <div class="max-w-md mx-auto grid grid-cols-5 text-center">
+
+        <button
+            onclick="location.href='index.html'"
+            class="p-3">
+
+            🏠<br>Home
+
+        </button>
+
+        <button
+            onclick="location.href='bill.html'"
+            class="p-3">
+
+            📄<br>Bill
+
+        </button>
+
+        <button
+            class="p-3 bg-blue-100 text-blue-600 font-bold">
+
+            📦<br>Kho
+
+        </button>
+
+        <button
+            onclick="location.href='thongke.html'"
+            class="p-3">
+
+            📊<br>TK
+
+        </button>
+
+        <button
+            onclick="location.href='settings.html'"
+            class="p-3">
+
+            ⚙️<br>Setting
+
+        </button>
+
+    </div>
+
+</nav>
+
+<script src="assets/js/kho.js"></script>
+
+</body>
+</html>

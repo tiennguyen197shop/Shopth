@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quán Điện Tiến</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-100">
+  <div class="max-w-md mx-auto min-h-screen pb-24">
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white p-4 shadow">
+      <h1 class="text-2xl font-bold">QUÁN ĐIỆN TIẾN</h1>
+      <p class="text-sm opacity-90">Tính tiền sửa chữa điện dân dụng</p>
+    </header>
+    <!-- TOTAL -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <p class="text-sm text-gray-500 uppercase">Tổng tiền</p>
+        <h2 id="tongTien" class="text-4xl font-bold mt-2">0đ</h2>
+      </div>
+    </section>
+    <!-- CUSTOMER -->
+    <section class="px-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <h3 class="font-bold mb-3">Thông tin khách</h3>
+        <input id="tenKhach" class="w-full border rounded-xl p-3 mb-3" placeholder="Tên khách">
+        <input id="soDienThoai" class="w-full border rounded-xl p-3" placeholder="Số điện thoại">
+      </div>
+    </section>
+    <!-- OPEN MODAL -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <div class="flex justify-between items-center">
+          <h3 class="font-bold">Công việc & Linh kiện</h3>
+          <!-- BUTTON MỚI -->
+          <div class="flex gap-2">
+            <button id="btnOpenJob" class="bg-blue-600 text-white px-3 py-2 rounded-xl text-sm">Công việc</button>
+            <button id="btnOpenPart" class="bg-green-600 text-white px-3 py-2 rounded-xl text-sm">Linh kiện</button>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400 mt-2">Chọn công việc và linh kiện trong cửa sổ</p>
+      </div>
+    </section>
+    <!-- JOB COST -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <h3 class="font-bold mb-3">Tiền công</h3>
+        <div class="grid grid-cols-4 gap-2" id="congBox">
+        </div>
+      </div>
+    </section>
+    <!-- GAS -->
+    <section class="px-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <h3 class="font-bold mb-3">Xăng xe</h3>
+        <div class="flex gap-2">
+          <input id="distance" class="flex-1 border rounded-xl p-3" placeholder="Km">
+          <button id="btnTinhXang" class="bg-blue-600 text-white px-4 rounded-xl">Tính</button>
+        </div>
+        <p id="tienXang" class="mt-2 font-bold text-green-600">0đ</p>
+      </div>
+    </section>
+    <!-- INVOICE -->
+    <section class="p-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <div class="flex justify-between mb-3">
+          <h3 class="font-bold">Hóa đơn</h3>
+          <span id="invoiceCount" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">0 mục</span>
+        </div>
+        <div id="invoiceDetail" class="space-y-2">
+        </div>
+      </div>
+    </section>
+    <!-- NOTE -->
+    <section class="px-4">
+      <div class="bg-white rounded-2xl p-4 shadow">
+        <h3 class="font-bold mb-3">Ghi chú</h3>
+        <textarea id="ghiChu" class="w-full border rounded-xl p-3" rows="3">
+        </textarea>
+      </div>
+    </section>
+    <!-- ACTION -->
+    <section class="p-4">
+      <div class="grid grid-cols-3 gap-2">
+        <button id="btnSave" class="bg-green-600 text-white py-3 rounded-xl">Lưu</button>
+        <button id="btnReset" class="bg-red-600 text-white py-3 rounded-xl">Mới</button>
+        <button id="btnHistory" class="bg-blue-600 text-white py-3 rounded-xl">Lịch sử</button>
+      </div>
+    </section>
+  </div>
+  <!-- NAV -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg">
+    <div class="max-w-md mx-auto grid grid-cols-4 text-center">
+      <button onclick="location.href='/'" class="p-3 bg-blue-100 text-blue-600 font-bold">🏠
+        <br>Home</button>
+      <button onclick="location.href='bill.html'" class="p-3">📄
+        <br>Bill</button>
+      <button onclick="location.href='kho.html'" class="p-3">📦
+        <br>Kho</button>
+      <button onclick="location.href='settings.html'" class="p-3">⚙️
+        <br>Setting</button>
+    </div>
+  </nav>
+  <!-- Dùng Chung -->
+   <script src="assets/js/chung.js"></script>
+   <!-- Hệ Thống -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/button.js"></script>
+</body>
+
+</html>
